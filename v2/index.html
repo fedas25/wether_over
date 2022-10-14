@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V2</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <img class="logo" src="./img/logo.svg" alt="logo">
+    <div class="main">
+        <div class="input_form">
+            <input type="text" placeholder="city">
+            <img src="./img/search.svg" alt="search_icon" srcset="">
+        </div>
+
+        <div class="data">
+            <div class="left_group">
+                <div class="weather_information">
+
+                    <!-- Now -->
+                    <div class="now">
+                        <p class="temperature"></p>
+                        <img src="./img/weather_icon.svg" alt="" class="icon-weather">
+
+                        <div class="lower_elements">
+                            <p class="month"></p>
+                            <img src="./img/favorites_icon.svg" alt="edit_list_icon" srcset="">
+                        </div>
+                    </div>
+
+                    <!-- Details  -->
+                    <div class="details">
+                        <p class="month"></p>
+                        <div class="data_day">
+                            <p name="Temperature">Temperature: </p>
+                            <p name="Feels like">Feels like: </p>
+                            <p name="Weather">Weather: </p>
+                            <p name="Sunrise">Sunrise: </p>
+                            <p name="Sunset">Sunset: </p>
+                        </div>
+                    </div>
+
+                    <!-- Forecast -->
+                    <div class="forecast">
+                        <p class="month"></p>
+                        <div class="hourly_forecasts">
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="menu">
+                    <div name="now" class="menu_item">Now</div>
+                    <div name="details" class="menu_item">Details</div>
+                    <div name="forecast" class="menu_item">Forecast</div>
+                </div>
+            </div>
+
+            <div class="right_group">
+                <div class="form_add_location">
+                    Added location:
+                </div>
+                <div class="location">
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <template id="tmp_forecast_for_hour">
+
+        <div class="forecast_for_hour">
+            <div class="left_group">
+                <p class="data"></p>
+                <p class="temperature">Temperature: </p>
+                <p class="feels_like">Feels like: </p>
+            </div>
+            <div class="right_group">
+                <p class="time"></p>
+                <img src="https://openweathermap.org/img/wn/10n@4x.png">
+            </div>
+        </div>
+
+    </template>
+
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>
