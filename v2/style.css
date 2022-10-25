@@ -1,12 +1,35 @@
 @font-face {
-    font-family: Roboto-Regular;
+    font-family: Roboto;
     src: url(./font/roboto/Roboto-Regular.ttf);
+}
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(./font/roboto/Roboto-BoldItalic.ttf);
 }
 
 * {
-    font-family: Roboto-Regular;
+    font-family: 'Roboto';
     margin: 0;
     box-sizing: border-box;
+    color: rgba(0, 0, 0, 0.587);
+}
+html{
+    background: linear-gradient(-55deg, #92c9cb7b, #d0cee4, #c1eef7, #23a8d549);
+	background-size: 400% 400%;
+	animation: gradient 10s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 10% 50%;
+	}
+	50% {
+		background-position: 70% 50%;
+	}
+	100% {
+		background-position: 10% 50%;
+	}
 }
 
 .logo {
@@ -16,56 +39,78 @@
     margin: 20px auto 0;
 }
 
-div {
-    outline: 2px solid #2871B7;
-    box-sizing: border-box;
-}
+.data {
+    background: rgba(255,255,255,0.4); 
+     box-sizing: border-box;
+     border-radius: 10px;
+   -webkit-background-size: cover;
+           background-size: cover;
+              background-repeat: no-repeat;
+     background-blend-mode: multiply;
+     box-shadow:
+     -23px 0 20px -23px rgba(208,206,228, 0.8),
+     23px 0 20px -23px rgba(208,206,228,.8),
+     0 0 40px rgba(208,206,228,.1) inset;
+           
+ }
 
 .main {
-    margin: 1% auto;
-    height: 450px;
-    width: 650px;
+    margin: 5%  auto;
+    height: 850px;
+    width: 1000px;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .input_form img {
     margin-left: 20px;
     cursor: pointer;
+    
+   
 }
 
 .main>.input_form {
+    
     height: 50px;
     width: 100%;
     display: flex;
+  
 }
 
+
 .main>.input_form>input {
-    width: 90%;
+    background: rgba(255,255,255,0.6); 
+    width: 100%;
+    height: 50px;
     font-size: 25px;
     padding-left: 10px;
     border: none;
+    border-radius: 10px;
 }
 
 .input_form>input:focus {
     outline: none;
+    
 }
 
 .main>.data {
-    height: 400px;
+    height: 450px;
     width: 100%;
     display: flex;
 }
 
 .data>.left_group {
-    height: 100%;
+    height: 70%;
     width: 65%;
 }
 
-.data>.right_group {
+.right_group {
     height: 100%;
     width: 45%;
+
 }
+
 
 .left_group>.weather_information {
     height: 350px;
@@ -77,15 +122,15 @@ div {
 
 .data_day {
     height: 200px;
-    width: 100%;
+    width: 77%;
+    
     margin-bottom: 60px;
     outline: none;
 }
 
 .data_day>p {
     font-size: 24px;
-    margin-top: 2px;
-    margin-left: 12px;
+    margin: 5px 0 0 12px;
 }
 
 .details {
@@ -94,65 +139,79 @@ div {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-left: 60px;
 }
 
 .month {
     margin: 30px 0px 0px 12px;
     font-size: 30px;
+    
 }
 
 .left_group>.menu {
+    margin-left: 50px;
     height: 50px;
-    width: 100%;
+    width: 80%;
     display: flex;
+    
 }
 
 .left_group>.menu>.menu_item {
     width: 33.33%;
-    height: 100%;
+    height: 80%;
+    margin-top: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 20px;
     cursor: pointer;
+    border-radius: 10px;
 }
+
 
 
 .right_group>.form_add_location {
     outline: none;
     height: 60px;
-    width: 100%;
+    width: 90%;
     box-sizing: border-box;
     padding: 25px 0px 0px 20px;
     font-size: 25px;
+   
 }
 
 .right_group>.location>div {
     padding: 2px 0px 2px 3px;
     cursor: pointer;
+    border-radius: 10px;
 }
 
 .right_group>.location {
     outline: none;
-    height: 340px;
-    width: 100%;
+    height: 341px;
+    width: 90%;
     box-sizing: border-box;
     overflow-y: scroll;
     overflow-x: hidden;
     padding-left: 20px;
+    background-color: rgba(255, 255, 255, 0.5333);
+    border-radius: 10px;
 }
 
 .right_group>.location::-webkit-scrollbar {
     width: 10px;
+    
 }
 
 .right_group>.location::-webkit-scrollbar-thumb {
-    background-color: rgb(107, 117, 231);
+    height: 300px;
+    width: 90%;
+   
 }
 
 .location>div {
-    width: 90%;
-    margin: 10px 0px 15px;
+    width: 100%;
+    margin: 7px 0px 15px;
     font-size: 25px;
     display: flex;
     justify-content: space-between;
@@ -179,7 +238,8 @@ div {
 .now {
     display: flex;
     height: 100%;
-    width: 100%;
+    width: 77%;
+    margin-left: 50px;
     flex-direction: column;
     justify-content: space-between;
     padding: 20px 0px 0px 0px;
@@ -194,26 +254,31 @@ div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0px 30px 0px 20px;
+    padding: 0px 10px 0px 20px;
     outline: none;
-}
-
-.lower_elements p {
-    margin: 25px 0px 20px;
     font-size: 30px;
 }
 
-.now>.temperature {
-    margin-left: 25px;
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 65px;
+.lower_elements p {
+    margin: 15px 0px 10px;
+    font-size: 30px;
 }
 
+.now .temperature {
+    color:#94a6e8;
+    margin-left: 20px;
+    font-family: 'Roboto';
+    font-style: bold;
+    font-size: 100px;
+
+}
+
+
+
 .selected {
-    color: aliceblue;
-    background-color: black;
+    color: rgb(0, 0, 0);
+    background-color:rgba(255, 255, 255, 0.533);
+
 }
 
 img[alt="edit_list_icon"] {
@@ -222,36 +287,46 @@ img[alt="edit_list_icon"] {
 
 
 .forecast {
-    height: 100%;
+    height: 50%;
+    width: 90%;
+    margin-left: 20px;
 }
 
 .forecast>.month {
-    margin: 10px 0px 10px 20px;
+    margin: 20px 0 0px 45px;
 }
 
 .hourly_forecasts {
-    width: 100%;
+    width: 91%;
     height: 295px;
     overflow-y: scroll;
     overflow-x: hidden;
+    color: #94a6e8;
+    margin-left: 20px;
+   
 }
 
 .hourly_forecasts::-webkit-scrollbar {
-    width: 10px;
+    width: 15px;
 }
 
 .hourly_forecasts::-webkit-scrollbar-thumb {
-    background-color: rgb(107, 117, 231);
+    background-color: #23a8d5af;
+    border-radius: 10px;
+    min-height: 50px;
+
 }
 
 .forecast_for_hour {
-    height: 125px;
-    width: 310px;
+    height: 120px;
+    width: 410px;
     margin: 15px auto 20px 20px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     font-size: 26px;
+    background-color: rgba(255, 255, 255, 0.533);
+    border-radius: 25px;
 }
 
 .forecast_for_hour>.left_group {
