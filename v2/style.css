@@ -55,8 +55,8 @@ html{
  }
 
 .main {
-    margin: 5%  auto;
-    height: 850px;
+    margin: 3%  auto;
+    height: 550px;
     width: 1000px;
     display: flex;
     flex-direction: column;
