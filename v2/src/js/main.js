@@ -3,7 +3,7 @@ import { storage } from "./storage.js"
 let htmlNodes = undefined;
 
 let listCitySet = new Set;
-const apiKey = 'f660a2fb1e4bad108d6160b7f58c555f';
+const apiKey = 'bc4045a321a822dc64c0a1a6266a2780';
 
 const clearDisplay = () => {
   htmlNodes.nowTab.classList.add("dis_none");
@@ -135,7 +135,7 @@ const showCityList = () => {
   clearScreenAddedLocation(screenAddedLocation);
   listCitySet.forEach((item) => {
     const deleteIcon = document.createElement('img');
-    deleteIcon.src = "./img/delete_icon.svg";
+    deleteIcon.src = "./../img/delete_icon.svg";
     
     deleteIcon.addEventListener('click', (event) => {
       const city = event.target.previousSibling.innerText;
@@ -166,7 +166,7 @@ const isCityInFavorites = (citiName) => {
 }
 
 const setFavoritesIcon = (isFavorite) => {
-  htmlNodes.editListIcon.setAttribute("src", (isFavorite) ? "./img/favorites_icon_selected.svg" : "./img/favorites_icon.svg");
+  htmlNodes.editListIcon.setAttribute("src", (isFavorite) ? "./../img/favorites_icon_selected.svg" : "./../img/favorites_icon.svg");
 }
 
 const setIconCityStatus = () => {
